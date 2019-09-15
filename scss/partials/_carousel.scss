@@ -1,0 +1,7 @@
+.section-carousel {
+    @include max-with-600 {
+		display: none;
+	}
+	
+    display: block;   
+}

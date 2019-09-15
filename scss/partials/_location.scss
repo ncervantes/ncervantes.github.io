@@ -1,0 +1,75 @@
+.section-location {
+    h2 {
+		text-align: center;
+	}	   
+	.location-container {
+		overflow: hidden;
+		width: 100%;	
+			
+		.donaluz-address {	
+		    padding-bottom: 500em;
+  			margin-bottom: -500em;		    
+			width: 50%;	
+			text-align: center;	
+			@include max-with-600 {
+				width: 100%;							
+			}		
+			.donaluz-title {			    			       
+			    text-align: center;
+			    @include max-with-600 {
+					margin-top: 8%;							
+				}
+			    @include laptops-desktops-up {
+			    	margin-top: 23%;
+			    }
+			    @include landscape-tablets-up {
+			    	margin-top: 18%
+			    }
+			    @include portrait-tablets-up {
+			        margin-top: 14%;
+			    }
+
+				h3 {
+				    font-size: 1.4rem;
+				    transition: .4s;
+				    background-color: $gold;
+					display: inline-block;
+					padding-left: 12px;
+					padding-right: 12px;
+					margin-bottom: 26px;
+				    @include laptops-desktops-up {
+						font-size: (1rem*30/16);
+					}	
+				}
+
+				address {
+				    @include laptops-desktops-up {
+						font-size: (1rem*18/16);
+						color: $grey;
+					}
+				}
+
+			}		
+		}
+	}
+}
+
+.iframe-container {		
+	position: relative;
+	width: 50%;
+	padding-bottom: 35.25%;
+	height: 0;		
+	box-sizing: border-box;		
+    margin-top: 20px;
+    @include max-with-600 {
+		width: 100%;							
+	}		
+	
+	iframe {
+		position: absolute;
+		top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	}
+}

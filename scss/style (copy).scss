@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+$gold: #ffbf00;
+$white: #ffffff;
+$black: #000000;
+$grey: #717171;
+$black-opacity: rgba(0,0,0, 0.8);
+$light-grey: #e1e1e1;
+$dark-grey: #4b555d;
+
+/* Media Queries Mixins */
+
+@mixin landscape-tablets-up {
+	@media only screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin laptops-desktops-up {
+	@media only screen and (min-width: 992px) {
+		@content;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto Condensed', sans-serif;	
+	background: #eee;	
+}
+
+h2 {	
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	background: $gold;
+	padding: 20px;
+}
+
+h3 {
+	font-size: 1.0rem;
+}
+
+p {
+	color: $grey;
+}
+
+address {
+	margin-top: 20px;
+}
+
+/* headings */
+
+.navbar-dark { 
+   background: $black-opacity;    
+   .navbar-brand {
+      font-size: 30px;      
+      .logo {
+      	margin-left: 10px; 
+      	color: $gold;      	      	
+      }      
+   }   
+}
+
+/* Section Carousel */
+
+.section-carousel {
+	display: none;
+	@include landscape-tablets-up {
+    	display: block;
+    }
+}
+
+
+/* Section About */
+
+.section-about {
+	text-align: center;
+	margin-top: 73px;
+	@include landscape-tablets-up {
+    	margin-top: 0px;       		
+    }
+	.menu-content {
+		@include landscape-tablets-up {
+       		width: 32%;       		
+       }
+	}
+	p {
+		margin-top: 23px;
+		margin-bottom: 32px;
+	}
+	.section-about-content {	   
+       img {
+       	  width: 100%;
+       	  margin-bottom: 10px;
+       }
+       .menu-block {
+       		position: relative;
+       		bottom: 12px;
+       		border: 1px solid $gold;
+       		padding-top: 10px;
+       		padding-left: 10px;
+       		padding-right: 10px;
+       		.menu-description {
+       			position: absolute;
+       			bottom: 12px;
+       			right: 20px;
+       			p {
+       				color: $white;
+       				font-weight: bold;
+       				text-decoration: underline;       				
+       			}
+       		}
+       }
+
+       @include landscape-tablets-up {
+       		display: flex;
+       		justify-content: space-between;
+       		margin-left: 20px;
+       		margin-right: 20px;
+       }
+	}
+}
+
+
+/* Section Location */
+
+.section-location {
+	text-align: center;	
+	.location {
+		margin-left: 20px;
+	    margin-right: 20px;
+	}
+	.location-container {
+    	@include landscape-tablets-up {
+    		display: flex;
+    	}
+    }
+	.donaluz-address {	
+	    border: 1px solid $gold;	    
+	    margin-top: 20px;
+	    @include landscape-tablets-up {
+	       	display: flex;
+	       	flex-direction: column;
+	       	justify-content: center;
+	       	align-items: center;
+	       	margin-right: 20px;
+		}	
+		.donaluz-title {
+			margin-top: 26px;
+			h3 {
+				@include landscape-tablets-up {
+		       		font-size: 1.75rem;
+		       }
+			}						
+		}
+		@include landscape-tablets-up {    		
+    		width: 70%;
+    	}
+	}
+	.iframe-container {		
+		position: relative;
+		width: 100%;
+		padding-bottom: 35.25%;
+		height: 0;
+		border: 1px solid $gold;
+		box-sizing: border-box;		
+	    margin-top: 20px;		
+		
+		iframe {
+			position: absolute;
+			top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		}
+	}
+
+}
+
+/* Section Hours */
+
+.section-hours {
+    background: $black;    	
+	text-align: center;
+	margin-top: 30px;
+	.donaluz-hours {
+		padding-top: 18px;
+		padding-bottom: 12px;
+	}
+	
+	p {
+		color: $white;  
+	}	
+}
+
+/* Section Socials */
+
+.section-socials {
+	text-align: center;
+	margin-top: 30px;
+	.social-media {
+		margin-top: 32px;
+        margin-bottom: 27px;
+	}
+}
+
+/* Section Footer */
+
+.section-footer {
+    background: $black;
+	text-align: center;
+	padding-top: 12px;
+	padding-bottom: 1px;	
+	margin-top: 12px;
+	p {
+		color: $gold;
+	}
+}
+
+/* Menu File */
+
+@import url('https://fonts.googleapis.com/css?family=Laila');
+
+.menu-body {
+	background-image: url(../img/pexels-photo-262978.jpeg);
+	background-repeat: no-repeat;	
+	background-size: cover;
+	height: 100%;
+}
+
+.main-menu {
+	max-width: 980px;
+	margin: 110px auto;
+	background: $white;
+	opacity: 0.8;	
+	
+	.section-menu {
+		text-align: center;
+		padding: 30px;
+		.menu-detail {
+			border: 3px solid $gold;
+			padding:30px;
+			.menu-block {
+			    font-family: 'Laila', serif;
+			    margin-top: 42px;
+				img {
+		            border-radius: 50%;
+		            margin-bottom:12px;
+		        }
+
+		        h3 {
+		        	font-size: 1.4rem;
+		        	margin-bottom: 20px;
+		        }
+		        p {
+		        	color: $dark-grey;
+		        	line-height: 16px;
+		        }
+		    }
+
+	        h1 {
+	        	background: $gold;
+	        }
+		}
+	}
+}
+
+.menu-footer {
+	padding-top: 0;
+
+	.donaluz-footer {
+		margin-top: 30px;
+		margin-bottom: 30px;
+		p {
+		   color: $white;
+		}
+	}
+}
+
+
+
+  
